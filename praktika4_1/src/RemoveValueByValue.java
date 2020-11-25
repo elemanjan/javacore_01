@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class RemoveValueByIndex {
+public class RemoveValueByValue {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] nums = new int[10];
@@ -10,14 +10,12 @@ public class RemoveValueByIndex {
         }
         int[] temp = new int[nums.length];
         System.out.println("Enter the clean number: ");
-        int clnIndex = sc.nextInt();
+        int clnNum = sc.nextInt();
         for (int i = 0; i < nums.length; i++) {
-            if (i == clnIndex){
-                if (i < nums.length-1){
-                    temp[clnIndex] = nums[i+1];
-                }
+            if (nums[i] != clnNum){
+                temp[i] = nums[i];
             }
-            else temp[i] = nums[i];
+            else i++;
         }
         System.out.println(Arrays.toString(temp));
     }
