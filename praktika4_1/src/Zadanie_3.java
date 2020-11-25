@@ -1,7 +1,9 @@
 import java.util.Arrays;
 import java.util.Scanner;
+//Считайте с консоли лист чисел, размером 10, затем n число,
+// удалите число находящий в индексе n
 
-public class RemoveValueByValue {
+public class Zadanie_3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] nums = new int[10];
@@ -13,10 +15,8 @@ public class RemoveValueByValue {
         int clnNum = sc.nextInt();
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != clnNum){
-                temp[i] = nums[i];
+                System.out.print(nums[i] + " ");
             }
-            else i++;
         }
-        System.out.println(Arrays.toString(temp));
     }
 }

@@ -1,7 +1,9 @@
 import java.util.Arrays;
 import java.util.Scanner;
+//Считайте с консоли лист чисел, размером 10, затем n число,
+// выведите индекс n числа в листе если он есть
 
-public class GetIndex {
+public class Zadanie_2 {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         int[] nums = new int[10];
