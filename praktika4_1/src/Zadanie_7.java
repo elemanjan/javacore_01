@@ -8,18 +8,22 @@ public class Zadanie_7 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int[] list = new int[5];
-        int value = 0;
         for (int i = 0; i < list.length; i++) {
+            System.out.println("Enter the number:");
             list[i] = scan.nextInt();
         }
+        int max = 0;
+        int secondMax = 0;
         for (int i = 0; i < list.length; i++) {
-            if (i < list.length-1){
-                if (list[i] > list[i+1]){
-                    value = list[i];
-                }
-//                else value = list
+            if (list[i] > max){
+                max = list[i];
             }
         }
-        System.out.println(value);
+        for (int i = 0; i < list.length; i++){
+            if (list[i] > secondMax && list[i] < max){
+                secondMax = list[i];
+                }
+            }
+        System.out.println(secondMax);
     }
 }
