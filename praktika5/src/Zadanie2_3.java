@@ -3,12 +3,13 @@
 
 import java.util.Scanner;
 
-public class Zadanie2 {
+public class Zadanie2_3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter length of list ↓");
         int n = sc.nextInt();
         int[] list = readList(n);
+        recordValue(list);
         printList(list);
     }
 
@@ -19,11 +20,17 @@ public class Zadanie2 {
 
     public static void printList(int[] list) {
         int i = list.length-1;
-        while (list.length != 0){
+        while (true){
             System.out.println(list[i]);
+            if (i == 0) break;
             i--;
         }
     }
 
-
+    public static int[] recordValue(int[] list){
+        for (int i = 0; i < list.length ; i++) {
+            list[i] = i;
+        }
+        return list;
+    }
 }
